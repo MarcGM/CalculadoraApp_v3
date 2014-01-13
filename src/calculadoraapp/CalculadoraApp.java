@@ -54,19 +54,17 @@ public class CalculadoraApp {
     public static void recojerTeclas(int ordenTecla){
         switch(ordenTecla){
             case 1:
-                num1 = inScanner.nextDouble();
+                num1S = inScanner.next();
                 break;
             case 2:
                 operador = inScanner.next();
                 break;
             case 3:
-                num2 = inScanner.nextDouble();
+                num2S = inScanner.next();
                 break;
             case 0:
                 llamarMetOperaciones();
-                num1 = 0;
-                num2 = 0;
-                operador = null;
+//
                 
                 operador = inScanner.next();
                 if(operador.equals("=")){
@@ -82,6 +80,9 @@ public class CalculadoraApp {
         }
     }
     public static void llamarMetOperaciones(){
+        num1 = Double.parseDouble(num1S);
+        num2 = Double.parseDouble(num2S);
+        
         switch(operador){
             case "+":
                 resultado = suma();
@@ -96,6 +97,7 @@ public class CalculadoraApp {
                 resultado = division();
                 break;
         }
+        resultadoS = String.valueOf(resultado);
     }
     public static double suma(){
         return num1 + num2;
@@ -115,5 +117,13 @@ public class CalculadoraApp {
         System.out.println();
         System.out.println("Escribe un operador o el símbolo \"=\" y apreta la tecla \"enter\":");
         recojerTeclas(0);
+    }
+    public static void reinicializarVariables(){
+        num1 = 0;
+        num2 = 0;
+        operador = null;
+        num1S = null;
+        num2S = null;
+        operador = null;
     }
 }
