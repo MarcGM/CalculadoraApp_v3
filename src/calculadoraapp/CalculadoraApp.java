@@ -4,7 +4,7 @@ import java.util.Scanner;
 import java.util.ArrayList;
 
 /*
- * @author becari
+ * @author Marc
  */
 public class CalculadoraApp {
 
@@ -49,13 +49,13 @@ public class CalculadoraApp {
     public static void recojerTeclas(int ordenTecla){
         switch(ordenTecla){
             case 1:
-                num1 = inScanner.nextInt();
+                num1 = inScanner.nextDouble();
                 break;
             case 2:
                 operador = inScanner.next();
                 break;
             case 3:
-                num2 = inScanner.nextInt();
+                num2 = inScanner.nextDouble();
                 break;
             case 0:
                 llamarMetOperaciones();
