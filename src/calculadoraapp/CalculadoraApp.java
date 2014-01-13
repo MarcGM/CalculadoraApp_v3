@@ -11,8 +11,13 @@ public class CalculadoraApp {
     /**
      * @param args the command line arguments
      */
+
     private static double num1;
     private static double num2;
+    //Las siguientes tres líneas son los dos números de la operación y el resultado en String.
+    private static String num1S;
+    private static String num2S;
+    private static String resultadoS;
     private static String operador;
     private static double resultado;
     private static Scanner inScanner;
